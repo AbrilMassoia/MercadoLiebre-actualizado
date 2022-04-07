@@ -1,9 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: #ebebeb;
+    background-color: #ebebeb;  
 }
 
+/*HEADER*/
 header{
     background-color: #eac926;   
 }
@@ -39,7 +44,48 @@ header button.barra-menu{
     text-align: center;
 }
 
-h1{
+nav{
+    display: none;
+}
+/*BANNER*/
+
+.banner{
+    text-align: center;
+    width: 100;
+}
+/*MAIN*/
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+     background-color: #ffff;
+     margin: 10px 0px;
+
+}
+
+main section article i, .descuento{
+    color: #39b54a;
+}
+
+main section article img {
+    width: 100%;
+  }
+  
+.articulos{
+    border-top:  solid 1px #ebebeb; 
+    padding: 15px;
+}
+
+.articulos i{
+    border: 2px solid #39b54a;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+main section h3{
     font-size: 24px;
 }
 
@@ -47,9 +93,18 @@ h1{
     font-size: 16px;
 }
 
+.precio{
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .descripcion{
     font-size: 16px;
+    font-weight: lighter;
+    display: none;
 }
+
+/*FOOTER*/
 
 footer.pie_de_pagina{
     text-align: center;
@@ -61,21 +116,43 @@ footer div i{
     color: #1259c3;
 }
 
-main{
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
+
+
+/*TABLET*/
+
+@media screen and (min-width:361px) and (max-width:769px){
+    .descripcion{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+    }
+
+    nav{
+        display: block;
+    }
+
+    .contenedor-boton{
+        display: none;
+    }
 }
 
-main section article{
-    background-color: #ffff;
-     margin: 10px 0px;
+/*DESKTOP*/
+ @media screen and (min-width:769px){
+     .descripcion{
+         display: block;
+     }
 
-}
+     main section article{
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+    }
+    
+    nav{
+        display: block;
+    }
 
-main section article i, .descuento{
-    color: #39b54a;
-}
-
-
-
+    .contenedor-boton{
+        display: none;
+    }   
+ }
